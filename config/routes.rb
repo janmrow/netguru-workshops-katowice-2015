@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :visitors
   resources :reports
 
+  get 'report/subjects', to: 'reports#subjects'
+
   get '/subjects', to: 'reports#subjects'
 
   root 'visitors#index'
