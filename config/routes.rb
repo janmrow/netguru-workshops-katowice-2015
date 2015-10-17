@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :reports
 
   get '/subjects', to: 'reports#subjects'
+
+  root 'visitors#index'
 end
