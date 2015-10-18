@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     get :subjects
   end
 
-  resources :teachers
+  resources :teachers do
+    get :subjects
+  end
+  
   resources :visitors
   resources :reports
 
