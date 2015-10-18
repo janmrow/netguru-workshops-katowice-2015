@@ -4,6 +4,7 @@ class SubjectItem < ActiveRecord::Base
   has_many :subject_item_notes
 
   belongs_to :teacher
+  belongs_to :student
 
 
   validates :title, presence: true
