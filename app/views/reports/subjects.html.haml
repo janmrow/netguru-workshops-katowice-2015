@@ -3,3 +3,10 @@
   list of subjects:
   - subject_items.each do |subject_item|
     .subject-item
+      %tr
+        %td= subject_item.title
+        - if subject_item.teacher_id.present?
+          = " (" + Teacher.find(subject_item.teacher_id).first_name + " " + Teacher.find(subject_item.teacher_id).last_name + ")."
+        - if subject_item.student_id.present?
+          Students: 
+          %td= Student.find(subject_item.student_id).first_name + " " + Student.find(subject_item.student_id).last_name
